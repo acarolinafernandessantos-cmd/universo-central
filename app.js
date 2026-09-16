@@ -484,7 +484,8 @@ document.addEventListener('input', (event) => {
   const current = Number(document.getElementById('currentPlanValue')?.value || 0);
   const next = Number(document.getElementById('newPlanValue')?.value || 0);
   const penalty = Number(document.getElementById('totalPenaltyValue')?.value || 0);
-  const percentage = current > 0 && next >= 0 && next < current ? ((current - next) / current) * 100 : 0;
+  const difference = current - next;
+  const percentage = current > 0 && next >= 0 && next < current ? (difference / current) * 100 : 0;
   const result = penalty * percentage / 100;
   document.getElementById('penaltyResult').textContent = result.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   document.getElementById('penaltyBreakdown').textContent = percentage ? `Redução de ${percentage.toFixed(2).replace('.', ',')}% aplicada sobre a multa total` : 'Preencha os três valores';
