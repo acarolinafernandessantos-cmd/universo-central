@@ -481,12 +481,19 @@ document.getElementById('openMenu').addEventListener('click', () => sidebar.clas
 document.getElementById('closeMenu').addEventListener('click', () => sidebar.classList.remove('open'));
 document.addEventListener('input', (event) => {
   if (!event.target.matches('#currentPlanValue, #newPlanValue, #totalPenaltyValue')) return;
-  const current = Number(document.getElementById('currentPlanValue')?.value || 0);
-  const next = Number(document.getElementById('newPlanValue')?.value || 0);
-  const penalty = Number(document.getElementById('totalPenaltyValue')?.value || 0);
+
+  const parseValue = (value) => {
+    if (!value) return 0;
+    return Number(String(value).replace(/R\$\s?/g, '').replace(/\./g, '').replace(',', '.')) || 0;
+  };
+
+  const current = parseValue(document.getElementById('currentPlanValue')?.value);
+  const next = parseValue(document.getElementById('newPlanValue')?.value);
+  const penalty = parseValue(document.getElementById('totalPenaltyValue')?.value);
   const difference = current - next;
   const percentage = current > 0 && next >= 0 && next < current ? (difference / current) * 100 : 0;
   const result = penalty * percentage / 100;
+
   document.getElementById('penaltyResult').textContent = result.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   document.getElementById('penaltyBreakdown').textContent = percentage ? `Redução de ${percentage.toFixed(2).replace('.', ',')}% aplicada sobre a multa total` : 'Preencha os três valores';
 });
