@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <title>Universo Central | Modelos de atendimento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="brand-mark brand-logo" aria-hidden="true">
+            <span class="logo-orbit">◉</span>
+          </div>
+          <div><strong>universo</strong><small>central de atendimento</small><i>GUIA INTERNO</i></div>
+        </div>
+        <button class="mobile-close" id="closeMenu" aria-label="Fechar menu">×</button>
+        <nav class="nav-list" aria-label="Navegação principal">
+          <button class="nav-item active" data-view="inicio"><span>⌂</span> Visão geral</button>
+          <p class="nav-label">ROTINA</p>
+          <button class="nav-item" data-view="atendimentos"><span>✦</span> Abrir atendimento</button>
+          <button class="nav-item" data-view="processos"><span>↗</span> Processos e serviços</button>
+          <button class="nav-item" data-view="atualizacoes"><span>⚡</span> Atualizações e planos</button>
+          <button class="nav-item" data-view="composicao"><span>◫</span> Composição dos planos</button>
+          <button class="nav-item" data-view="regras"><span>!</span> SVA e regras obrigatórias</button>
+          <button class="nav-item" data-view="colinhas"><span>▤</span> Colinhas prontas</button>
+          <p class="nav-label">APOIO</p>
+          <button class="nav-item" data-view="apps"><span>▦</span> Aplicativos e acessos</button>
+          <button class="nav-item" data-view="guias"><span>▣</span> Guias dos aplicativos</button>
+          <button class="nav-item" data-view="videos"><span>▶</span> Vídeos de treinamento</button>
+        </nav>
+        <div class="sidebar-tip"><span>✺</span><div><b>Está começando?</b><small>Comece pela Visão geral. Ela mostra o caminho mais comum.</small></div></div>
+        <div class="sidebar-footer">Universo Internet <span>•</span> uso interno</div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="menu-toggle" id="openMenu" aria-label="Abrir menu">☰</button>
+          <div class="breadcrumb">CENTRAL <span>/</span> <b id="breadcrumbCurrent">VISÃO GERAL</b></div>
+          <div class="top-actions"><span class="online-dot"></span> Guia interno <button class="help-button" title="Ajuda">?</button></div>
+        </header>
+
+        <div class="page-wrap">
+          <section class="hero hero-refined" data-section="inicio">
+            <div class="hero-copy">
+              <div class="hero-badge"><span></span> CENTRAL DE ATENDIMENTO · USO INTERNO</div>
+              <h1>Atenda com<br /><em>segurança.</em></h1>
+              <p class="hero-text">Um guia simples para encontrar o processo certo, conferir as regras e registrar cada atendimento.</p>
+              <div class="hero-start"><strong>COMEÇANDO AGORA?</strong><span>Use a busca ou escolha um atalho abaixo.</span></div>
+              <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Ex.: mudança de endereço, segunda via, plano..." /><kbd>CTRL K</kbd></label>
+            </div>
+            <div class="hero-art hero-photo-art">
+              <div class="hero-photo-glow"></div>
+              <img src="universo-robot-app.png" alt="Mascote Universo Internet apresentando o aplicativo Universo Play" />
+              <div class="hero-art-label"><small>UNIVERSO INTERNET</small><b>SEMPRE TEM<br />UM CAMINHO.</b></div>
+            </div>
+          </section>
+
+          <section class="quick-grid quick-grid-refined" data-section="inicio">
+            <button class="quick-card red" data-view="atendimentos"><span class="quick-number">01</span><b>Abrir atendimento</b><small>Saiba o que preencher e use modelos prontos.</small><strong class="arrow">→</strong></button>
+            <button class="quick-card dark" data-view="processos"><span class="quick-number">02</span><b>Resolver um serviço</b><small>Encontre o passo a passo de cada solicitação.</small><strong class="arrow">→</strong></button>
+            <button class="quick-card light" data-view="atualizacoes"><span class="quick-number">03</span><b>Ofertar atualização</b><small>Confira planos, regras e mensagens antes de ofertar.</small><strong class="arrow">→</strong></button>
+          </section>
+
+          <section class="beginner-section" data-section="inicio">
+            <div class="beginner-heading">
+              <div><p class="eyebrow">PRIMEIRO ACESSO</p><h2>Nunca usou o sistema?</h2><p>Não precisa decorar tudo. Siga esta ordem e consulte o portal conforme o atendimento acontece.</p></div>
+              <span class="beginner-pill">GUIA RÁPIDO · 4 PASSOS</span>
+            </div>
+            <div class="beginner-grid">
+              <article><span>01</span><div><b>Identifique o pedido</b><small>Entenda o que o cliente precisa antes de clicar em qualquer opção.</small></div></article>
+              <article><span>02</span><div><b>Abra o atendimento</b><small>Registre o contato quando o processo exigir atendimento.</small></div></article>
+              <article><span>03</span><div><b>Consulte o passo a passo</b><small>Use Processos, Regras ou Aplicativos para saber o próximo passo.</small></div></article>
+              <article><span>04</span><div><b>Finalize e confira</b><small>Revise os dados, formalize e encerre o que já foi concluído.</small></div></article>
+            </div>
+          </section>
+
+          <section class="content-section" data-section="inicio">
+            <div class="section-heading"><div><p class="eyebrow">COMECE POR AQUI</p><h2>O mapa da sua rotina</h2></div><button class="text-button" data-view="processos">Ver todos os processos <span>→</span></button></div>
+            <div class="workflow"><div class="workflow-step"><span>01</span><div><b>Entenda o pedido</b><small>Identifique o que o cliente deseja e confira se é necessário abrir atendimento.</small></div></div><div class="workflow-line"></div><div class="workflow-step"><span>02</span><div><b>Confira as regras</b><small>Veja taxas, boletos em aberto, documentos e compatibilidade do plano.</small></div></div><div class="workflow-line"></div><div class="workflow-step"><span>03</span><div><b>Registre e finalize</b><small>Preencha a colinha do serviço, formalize e envie a mensagem certa.</small></div></div></div>
+          </section>
+
+          <section class="view" id="view-atendimentos" hidden></section>
+          <section class="view" id="view-processos" hidden></section>
+          <section class="view" id="view-atualizacoes" hidden></section>
+          <section class="view" id="view-composicao" hidden></section>
+          <section class="view" id="view-regras" hidden></section>
+          <section class="view" id="view-colinhas" hidden></section>
+          <section class="view" id="view-apps" hidden></section>
+          <section class="view" id="view-guias" hidden></section>
+          <section class="view" id="view-videos" hidden></section>
+          <div id="toast" role="status" aria-live="polite"></div>
+        </div>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
